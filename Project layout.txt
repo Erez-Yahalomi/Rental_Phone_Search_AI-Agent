@@ -1,0 +1,48 @@
+rental_outreach/
+├─ README.md
+├─ requirements.txt
+├─ .env.example
+├─ run.sh
+├─ rental_outreach.zip (if produced locally)
+├─ config/
+│  └─ settings.py
+├─ apps/
+│  ├─ logging_config.py
+│  ├─ api/
+│  │  ├─ server.py
+│  │  ├─ schemas.py
+│  │  ├─ routes_listings.py
+│  │  ├─ routes_calls.py
+│  │  └─ routes_dashboard.py
+│  ├─ ingestion/
+│  │  ├─ base_provider.py
+│  │  ├─ rentpath_provider.py
+│  │  ├─ filters.py
+│  │  └─ models.py
+│  ├─ conversation/
+│  │  ├─ prompts.py
+│  │  ├─ dialogue_manager.py     # GPT-powered DialogueManager
+│  │  ├─ summarizer.py 
+│  ├─ telephony/
+│  │  ├─ voice_gateway.py
+│  │  ├─ stt_tts.py
+│  │  └─ webhooks.py                 # wired to GPTDialogueManager
+│  ├─ workflow/
+│  │  ├─ jobs.py
+│  │  ├─ scheduler.py
+│  │  └─ rate_limit.py
+│  ├─ storage/
+│  │  ├─ db.py
+│  │  ├─ orm_models.py
+│  │  ├─ repositories.py
+│  │  └─ objects.py
+│  └─ telephony_helpers.py           # (optional utilities)
+├─ dashboard/
+│  ├─ index.html
+│  ├─ app.js
+│  └─ styles.css
+└─ tests/
+   ├─ test_dialogue_manager.py
+   ├─ test_ingestion_provider.py
+   ├─ test_api.py
+   └─ test_gpt_integration.py
