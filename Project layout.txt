@@ -4,20 +4,18 @@ rental_outreach/
 ├── .env
 ├── run.sh
 ├── config/
-│   └── settings.py                     # ✅ Updated: now includes LISTING_PROVIDER and Zillow config
+│   └── settings.py                    g
 ├── apps/
 │   ├── logging_config.py
 │   ├── api/
 │   │   ├── server.py
 │   │   ├── schemas.py
-│   │   ├── routes_listings.py         # ✅ Updated: uses create_provider() instead of rentpath
 │   │   ├── routes_calls.py
 │   │   └── routes_dashboard.py
 │   ├── ingestion/
-│   │   ├── __init__.py                # ✅ Updated: exposes create_provider()
-│   │   ├── factory.py                 # 🆕 New: centralizes provider selection via LISTING_PROVIDER
-│   │   ├── zillow_provider.py         # ✅ New: replaces rentpath logic with Zillow adapter│   │   ├
-│   │   ├── filters.py
+│   │   ├── __init__.py                
+│   │   ├── factory.py                
+│   │   ├── zillow_provider.py      
 │   │   └── models.py
 │   ├── conversation/
 │   │   ├── prompts.py
